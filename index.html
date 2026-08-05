@@ -45,20 +45,6 @@
       color: #090909;
       border-color: var(--gold);
     }
-    .editable-field {
-      outline: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color .2s ease;
-    }
-    .editable-field:focus {
-      border-color: var(--gold);
-      background: rgba(245,189,24,.07);
-    }
-    .editable-field:empty:before {
-      content: attr(data-placeholder);
-      color: #77736c;
-      pointer-events: none;
-    }
     .reveal { animation: enter .65s both }
     @keyframes enter {
       from { opacity: 0; transform: translateY(18px) }
@@ -76,7 +62,7 @@
 <header class="sticky top-0 z-30 w-full border-b border-[#f5bd1838] bg-[#090909ee] backdrop-blur">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
     <a href="#inicio" class="flex min-w-0 items-center gap-3">
-      <img loading="lazy" class="h-11 w-11 rounded-full object-cover" src="imagenes/logo1.jpeg"="PowerUp Logo" />
+      <img loading="lazy" class="h-11 w-11 rounded-full object-cover" src="imagenes/logo1.JPEG" alt="PowerUp Logo" />
       <div class="leading-none">
         <span class="block font-black tracking-[.18em] text-white text-[15px]">POWERUP</span>
         <span class="mt-1 block text-[9px] font-bold tracking-[.3em] text-[#f5bd18] text-[15px]">SUPPLEMENTATION</span>
@@ -103,7 +89,7 @@
           <span class="h-px w-12 bg-[#f5bd18]"></span>
           <p class="text-xs font-extrabold tracking-[.22em] text-[#f5bd18] text-[15px]">CATÁLOGO DE SUPLEMENTACIÓN</p>
         </div>
-        <img loading="lazy" class="mb-7 h-32 w-32 rounded-2xl object-cover shadow-2xl shadow-black md:h-40 md:w-40" src="imagenes\logo.PNG" alt="PowerUp Logo" />
+        <img loading="lazy" class="mb-7 h-32 w-32 rounded-2xl object-cover shadow-2xl shadow-black md:h-40 md:w-40" src="imagenes/logo.PNG" alt="PowerUp Logo" />
         <h1 class="brand-display max-w-2xl leading-tight text-white text-[30px] font-bold">MÁS FUERZA. MÁS ENFOQUE.<br />MEJORES RESULTADOS.</h1>
         <p class="mt-6 max-w-xl text-base leading-relaxed text-[#ddd7ca] md:text-lg">Escribenos a instagram @powerup1001 para más información.</p>
         <button id="explore-button" class="mt-9 inline-flex items-center gap-3 px-6 py-4 text-sm font-black tracking-[.08em] transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#f5bd18] bg-[#f5bd18] text-[#090909] text-[15px]">EDITAR CATÁLOGO</button>
@@ -192,16 +178,16 @@
     </div>
     <div class="p-5">
       <div class="flex items-start justify-between gap-3 mb-4">
-        <span class="editable-field bg-[#f5bd18] px-2 py-1 text-[9px] font-black tracking-[.1em] text-[#090909]" contenteditable="true" data-placeholder="CATEGORÍA"></span>
+        <span class="bg-[#f5bd18] px-2 py-1 text-[9px] font-black tracking-[.1em] text-[#090909]">CATEGORÍA</span>
         <i data-lucide="package-plus" class="h-5 w-5 text-[#f5bd18] flex-shrink-0"></i>
       </div>
-      <p class="editable-field w-fit text-[10px] font-black tracking-[.16em] text-[#f5bd18] mb-3" contenteditable="true" data-placeholder="MARCA"></p>
-      <h3 class="editable-field min-h-[3rem] text-base font-extrabold leading-snug text-white" contenteditable="true" data-placeholder="Nombre del suplemento"></h3>
-      <p class="editable-field mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]" contenteditable="true" data-placeholder="Presentación · sabor · tamaño"></p>
+      <p class="w-fit text-[10px] font-black tracking-[.16em] text-[#f5bd18] mb-3">MARCA</p>
+      <h3 class="min-h-[3rem] text-base font-extrabold leading-snug text-white">Nombre del suplemento</h3>
+      <p class="mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]">Presentación · sabor · tamaño</p>
       <div class="mt-5 flex items-end justify-between gap-3 border-t border-white/10 pt-4">
         <div>
           <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIO PÚBLICO</span>
-          <strong class="editable-field mt-1 block w-fit text-xl font-black text-[#f5bd18]" contenteditable="true" data-placeholder="$ 0"></strong>
+          <strong class="mt-1 block w-fit text-xl font-black text-[#f5bd18]">$ 0</strong>
         </div>
         <i data-lucide="tag" class="h-5 w-5 text-[#f5bd18]"></i>
       </div>
@@ -216,9 +202,9 @@
     // ----------------------------------------------------------------
     const products = [
       // ---- PROTEINAS ----
-      { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite ", formato: "2 lb", precio: 179000, imagen: "imagenes/whey elite.jpg" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "100 % Whey Elite", formato: "5 lb", precio: 385000, imagen: "imagenes/whey elite.jpg" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "100 % Whey Elite", formato: "8 Lb", precio: 547000, imagen: "imagenes/whey elite.jpg" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "2 lb", precio: 179000, imagen: "whey_elite.jpg" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "5 lb", precio: 385000, imagen: "whey_elite.jpg" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "8 lb", precio: 547000, imagen: "whey_elite.jpg" },
       { categoria: "Proteina Vegana", marca: "ALLEN NUTRITION", nombre: "Vegann Pro 2.2 Lb", formato: "2.2 lb", precio: 235000, imagen: "vegann_pro.jpg" },
       { categoria: "Proteina", marca: "BESTELITE", nombre: "Whey Total 2LB", formato: "2 lb", precio: 133000, imagen: "whey_total.jpg" },
       { categoria: "Proteina", marca: "BESTELITE", nombre: "Solid Isolate Caramel Vainilla 840 g", formato: "840 g / Caramel Vainilla", precio: 271000, imagen: "solid_isolate.jpg" },
@@ -253,6 +239,7 @@
       { categoria: "Proteina", marca: "Ghost", nombre: "Ghost Whey Protein 2lbs", formato: "2 lb", precio: 235900, imagen: "ghost_whey_2lb.jpg" },
       { categoria: "Proteina", marca: "Nutricost", nombre: "Whey Protein 2 LB", formato: "2 lb", precio: 211000, imagen: "nutricost_whey_2lb.jpg" },
       { categoria: "Proteina", marca: "Nutricost", nombre: "Whey Protein 5 LB", formato: "5 lb", precio: 368000, imagen: "nutricost_whey_5lb.jpg" },
+
       // ---- CREATINA ----
       { categoria: "Creatina", marca: "GMN", nombre: "Creatina Monohidratada GMN 300g", formato: "300 g", precio: 109000, imagen: "gmn_creatine_300g.jpg" },
       { categoria: "Creatina", marca: "IMN", nombre: "Creatina Monohidratada (400 g)", formato: "400 g", precio: 119000, imagen: "imn_creatine_400g.jpg" },
@@ -270,6 +257,7 @@
       { categoria: "Creatina", marca: "Nutricost", nombre: "Creatina Monohidrato 5g x 60 srv", formato: "60 serv", precio: 98000, imagen: "nutricost_creatine_60.jpg" },
       { categoria: "Creatina", marca: "Nutricost", nombre: "Creatina Monohidrato 5g x 91 srv", formato: "91 serv", precio: 139000, imagen: "nutricost_creatine_91.jpg" },
       { categoria: "Creatina", marca: "DRAGON", nombre: "Creatina Monohidratada DRAGON 60 Serv (300gr)", formato: "300 g / 60 serv", precio: 121000, imagen: "dragon_creatine_60.jpg" },
+
       // ---- PRE-ENTRENOS ----
       { categoria: "Pre-Entreno", marca: "ALLEN NUTRITION", nombre: "Pre Workout / Allen 30 Serv (450g)", formato: "450 g / 30 serv", precio: 135000, imagen: "allen_pre_workout.jpg" },
       { categoria: "Pre-Entreno", marca: "BESTELITE", nombre: "Thundr+ 30 Serv Mora Azul", formato: "30 serv / Mora Azul", precio: 143000, imagen: "thundr_pre.jpg" },
@@ -288,6 +276,7 @@
       { categoria: "Pre-Entreno", marca: "DRAGON", nombre: "Venom / Venom Inferno - Pre entreno 40 Serv", formato: "40 serv", precio: 161000, imagen: "venom_pre.jpg" },
       { categoria: "Pre-Entreno", marca: "Nutricost", nombre: "Pre X 30 srv", formato: "30 serv", precio: 145000, imagen: "pre_x.jpg" },
       { categoria: "Pre-Entreno", marca: "ProSupps", nombre: "Mr Hyde Max Pump 25 Serv", formato: "25 serv", precio: 167000, imagen: "mr_hyde.jpg" },
+
       // ---- VITAMINAS ----
       { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina C 1000mg (100 Tab)", formato: "100 tabs", precio: 67000, imagen: "vit_c_1000.jpg" },
       { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina D3 2000 IU (100 Sft)", formato: "100 softgels", precio: 46000, imagen: "vit_d3_2000.jpg" },
@@ -300,6 +289,7 @@
       { categoria: "Vitamina", marca: "Universal", nombre: "Animal Pak - Pastillas (44 Servicios)", formato: "44 serv", precio: 240000, imagen: "animal_pak.jpg" },
       { categoria: "Vitamina", marca: "GMP", nombre: "Vitamina C", formato: "90 caps", precio: 79000, imagen: "gmp_vit_c.jpg" },
       { categoria: "Vitamina", marca: "GMP", nombre: "Melatonina 60 Cap", formato: "60 caps", precio: 87000, imagen: "melatonina_60.jpg" },
+
       // ---- GANADORES ----
       { categoria: "Ganador", marca: "GMN", nombre: "Mega Gainer Vainilla 10 Lbs", formato: "10 lb / Vainilla", precio: 287000, imagen: "mega_gainer_10lb.jpg" },
       { categoria: "Ganador", marca: "GMN", nombre: "Super Mega Gainer 10 Lbs Vainilla", formato: "10 lb / Vainilla", precio: 261000, imagen: "super_mega_gainer_10lb.jpg" },
@@ -312,6 +302,7 @@
       { categoria: "Ganador", marca: "MEGAPLEX", nombre: "Gainz 6.4 lb", formato: "6.4 lb", precio: 219990, imagen: "gainz_6.4lb.jpg" },
       { categoria: "Ganador", marca: "MEGABOLIC", nombre: "Mass Vainilla 10 Lb", formato: "10 lb / Vainilla", precio: 222000, imagen: "mass_vainilla_10lb.jpg" },
       { categoria: "Ganador", marca: "REPS", nombre: "Creamass", formato: "2 lb", precio: 125000, imagen: "creamass.jpg" },
+
       // ---- OMEGA Y COLÁGENO ----
       { categoria: "Omega", marca: "IMN", nombre: "Omega 3 (120 Caps)", formato: "120 caps", precio: 64900, imagen: "imn_omega.jpg" },
       { categoria: "Omega", marca: "MACROBLENDS", nombre: "Omega 3 (120 Caps)", formato: "120 caps", precio: 75000, imagen: "macro_omega.jpg" },
@@ -338,11 +329,12 @@
       const fragment = template.content.cloneNode(true);
       const card = fragment.querySelector("article");
 
-      const catSpan = card.querySelector("[data-placeholder='CATEGORÍA']");
-      const brandP = card.querySelector("[data-placeholder='MARCA']");
-      const nameH3 = card.querySelector("[data-placeholder='Nombre del suplemento']");
-      const formatP = card.querySelector("[data-placeholder='Presentación · sabor · tamaño']");
-      const priceStrong = card.querySelector("[data-placeholder='$ 0']");
+      // Elementos a rellenar
+      const catSpan = card.querySelector(".bg-[#f5bd18].px-2.py-1");
+      const brandP = card.querySelector(".w-fit.text-[10px].font-black");
+      const nameH3 = card.querySelector("h3.min-h-\\[3rem\\].text-base.font-extrabold");
+      const formatP = card.querySelector(".mt-2.min-h-\\[1.25rem\\].text-xs.text-\\[\\#b7b3aa\\]");
+      const priceStrong = card.querySelector("strong.mt-1.block.w-fit.text-xl.font-black");
       const img = card.querySelector("img");
 
       if (catSpan) catSpan.textContent = product.categoria || "Suplemento";
@@ -351,8 +343,16 @@
       if (formatP) formatP.textContent = product.formato || "";
       if (priceStrong) priceStrong.textContent = `$ ${product.precio.toLocaleString('es-CO')}`;
 
-      // Asignar imagen: si existe el campo imagen, usarlo; si no, placeholder.
-      const imgSrc = product.imagen ? product.imagen : "https://via.placeholder.com/400x300/333/f5bd18?text=Sin+Imagen";
+      // Asignar imagen: si existe el campo imagen, se usa; si no, placeholder.
+      let imgSrc = "https://via.placeholder.com/400x300/333/f5bd18?text=Sin+Imagen";
+      if (product.imagen) {
+        // Si no contiene "imagenes/", lo agregamos para que la ruta sea relativa a la carpeta imagenes
+        if (!product.imagen.includes("imagenes/")) {
+          imgSrc = "imagenes/" + product.imagen;
+        } else {
+          imgSrc = product.imagen;
+        }
+      }
       if (img) img.src = imgSrc;
 
       // Devolver el card completo
