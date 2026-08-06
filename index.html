@@ -140,7 +140,6 @@
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Creatina" aria-pressed="false">CREATINA</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Pre-Entreno" aria-pressed="false">PRE-ENTRENOS</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Vitamina" aria-pressed="false">VITAMINAS</button>
-        <!-- Botón AGREGAR CUADRO eliminado -->
       </div>
       <div id="catalog-results" class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
       <p id="empty-state" class="mt-8 hidden border border-dashed border-[#f5bd1870] bg-[#141414] px-6 py-12 text-center text-sm text-[#f5bd18] text-[15px] italic">No encontramos cuadros con esos criterios. Prueba otra búsqueda o categoría.</p>
@@ -183,9 +182,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // ----------------------------------------------------------------
-    // 1. DATOS REALES (extraídos del PDF) - RUTAS DE IMAGEN CORREGIDAS
-    // ----------------------------------------------------------------
+ 
     const products = [
       // ---- PROTEINAS ----
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "2 lb", precio: 179000, imagen: "whey_elite.jpg" },
@@ -201,7 +198,7 @@
       { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "2 lb", precio: 178000, imagen: "Be_One.webp" },
       { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "3 lb", precio: 249000, imagen: "Be_One.webp" },
       { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "2 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpeg" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "5 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpeg" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "5 lb", precio: 74200, imagen: "imagenes/Mega_Gainer_5_lb.webp" },
 
       // ---- CREATINA ----
       { categoria: "Creatina", marca: "VITANAS", nombre: "Creatine Time 150g", formato: "50 Servicios", precio: 58000, imagen: "Creatine_Time.webp" },
@@ -330,14 +327,9 @@
       });
     });
 
-    // Buscador: se ejecuta al escribir y también al hacer clic en el botón de búsqueda (si existiera)
     searchInput.addEventListener("input", filterProducts);
-    // También forzamos un filtro inicial para mostrar todos los productos
     filterProducts();
 
-    // Ya no tenemos el botón "AGREGAR CUADRO", eliminamos su listener
-
-    // Render inicial
     renderCatalog(products);
     console.log("Catálogo renderizado correctamente. Productos:", products.length);
   });
