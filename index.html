@@ -91,7 +91,7 @@
         <img loading="lazy" class="mb-7 h-32 w-32 rounded-2xl object-cover shadow-2xl shadow-black md:h-40 md:w-40" src="imagenes/logo.PNG" alt="PowerUp Logo" />
         <h1 class="brand-display max-w-2xl leading-tight text-white text-[30px] font-bold">MÁS FUERZA. MÁS ENFOQUE.<br />MEJORES RESULTADOS.</h1>
         <p class="mt-6 max-w-xl text-base leading-relaxed text-[#ddd7ca] md:text-lg">Escribenos a instagram @powerup1001 para más información.</p>
-        <button id="explore-button" class="mt-9 inline-flex items-center gap-3 px-6 py-4 text-sm font-black tracking-[.08em] transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#f5bd18] bg-[#f5bd18] text-[#090909] text-[15px]">EDITAR CATÁLOGO</button>
+        <!-- Botón EDITAR CATÁLOGO eliminado -->
       </div>
     </div>
     <div class="absolute bottom-0 left-0 h-1 w-full gold-rule"></div>
@@ -140,7 +140,7 @@
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Creatina" aria-pressed="false">CREATINA</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Pre-Entreno" aria-pressed="false">PRE-ENTRENOS</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Vitamina" aria-pressed="false">VITAMINAS</button>
-        <button class="ml-auto border border-[#f5bd18] px-4 py-2 text-xs font-black tracking-[.08em] text-[#f5bd18] transition hover:bg-[#f5bd18] hover:text-[#090909] text-[15px]" id="add-product-button">AGREGAR CUADRO</button>
+        <!-- Botón AGREGAR CUADRO eliminado -->
       </div>
       <div id="catalog-results" class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
       <p id="empty-state" class="mt-8 hidden border border-dashed border-[#f5bd1870] bg-[#141414] px-6 py-12 text-center text-sm text-[#f5bd18] text-[15px] italic">No encontramos cuadros con esos criterios. Prueba otra búsqueda o categoría.</p>
@@ -184,31 +184,29 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------------------------------
-    // 1. DATOS REALES (extraídos del PDF)
+    // 1. DATOS REALES (extraídos del PDF) - RUTAS DE IMAGEN CORREGIDAS
     // ----------------------------------------------------------------
     const products = [
       // ---- PROTEINAS ----
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "2 lb", precio: 179000, imagen: "whey_elite.jpg" },
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "5 lb", precio: 385000, imagen: "whey_elite.jpg" },
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "8 lb", precio: 547000, imagen: "whey_elite.jpg" },
-      { categoria: "Proteina ", marca: "VITANAS", nombre: "Beef Isolate", formato: "2 lb", precio: 175000, imagen: "imagenes/Beef_Isolate.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Beef Isolate", formato: "5 lb", precio: 360000, imagen: "imagenes/Beef_Isolate.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Isolate Army", formato: " 2 lb ", precio: 235000, imagen: "imagenes/Isolate_Army.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Isolate Army ", formato: "5 lb ", precio: 475000, imagen: "imagenes/Isolate_Army.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass ", formato: "2 lb ", precio: 60000, imagen: "imagenes/Titan_Beef_Mass.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass ", formato: "5 lb ", precio: 130000, imagen: "imagenes/Titan_Beef_Mass.webp" },
-      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass  ", formato: "10 lb ", precio: 230000, imagen: "imagenes/Titan_Beef_Mass.webp" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Be One  ", formato: "2 lb  ", precio: 178000, imagen: "imagenes/Be_One.webp" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Be One  ", formato: "3 lb  ", precio: 249000, imagen: "imagenes/Be_One.webp" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer   ", formato: "2 lb  ", precio: 74200, imagen: "imagenes/Mega_gainer_2lb.jpeg" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer   ", formato: "5 lb  ", precio: 163000, imagen: "imagenes/Mega_Gainer_5_lb.webp" },
-
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Beef Isolate", formato: "2 lb", precio: 175000, imagen: "Beef_Isolate.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Beef Isolate", formato: "5 lb", precio: 360000, imagen: "Beef_Isolate.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Isolate Army", formato: "2 lb", precio: 235000, imagen: "Isolate_Army.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Isolate Army", formato: "5 lb", precio: 475000, imagen: "Isolate_Army.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass", formato: "2 lb", precio: 60000, imagen: "Titan_Beef_Mass.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass", formato: "5 lb", precio: 130000, imagen: "Titan_Beef_Mass.webp" },
+      { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass", formato: "10 lb", precio: 230000, imagen: "Titan_Beef_Mass.webp" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "2 lb", precio: 178000, imagen: "Be_One.webp" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "3 lb", precio: 249000, imagen: "Be_One.webp" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "2 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpeg" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "5 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpeg" },
 
       // ---- CREATINA ----
-      { categoria: "Creatina", marca: "VITANAS", nombre: "Creatine Time 150g ", formato: "50 Servicios", precio: 58000, imagen: "imagenes/Creatine_Time.webp" },
-      { categoria: "Creatina", marca: "IMN", nombre: "Creatine Time 300 g", formato: "100 Servicios", precio: 98000, imagen: "imagenes/Creatine_Time_100.webp" },
-      { categoria: "Creatina", marca: "GMN", nombre: "Creatine Monohidrato", formato: "100 Servicios", precio: 98000, imagen: "imagenes/creatina_monohidratada_GMN.webp" },
-
+      { categoria: "Creatina", marca: "VITANAS", nombre: "Creatine Time 150g", formato: "50 Servicios", precio: 58000, imagen: "Creatine_Time.webp" },
+      { categoria: "Creatina", marca: "IMN", nombre: "Creatine Time 300g", formato: "100 Servicios", precio: 98000, imagen: "Creatine_Time_100.webp" },
+      { categoria: "Creatina", marca: "GMN", nombre: "Creatine Monohidrato", formato: "100 Servicios", precio: 98000, imagen: "creatina_monohidratada_GMN.webp" },
 
       // ---- PRE-ENTRENOS ----
       { categoria: "Pre-Entreno", marca: "ALLEN NUTRITION", nombre: "Pre Workout / Allen 30 Serv (450g)", formato: "450 g / 30 serv", precio: 135000, imagen: "allen_pre_workout.jpg" },
@@ -290,6 +288,7 @@
 
     function filterProducts() {
       const query = searchInput.value.trim().toLowerCase();
+      console.log("Buscando:", query); // Depuración
       let filtered = products.filter(p => {
         const matchesCategory = activeFilter === "all" || p.categoria.toLowerCase() === activeFilter.toLowerCase();
         const matchesSearch = !query ||
@@ -331,24 +330,12 @@
       });
     });
 
+    // Buscador: se ejecuta al escribir y también al hacer clic en el botón de búsqueda (si existiera)
     searchInput.addEventListener("input", filterProducts);
+    // También forzamos un filtro inicial para mostrar todos los productos
+    filterProducts();
 
-    document.getElementById("add-product-button").addEventListener("click", () => {
-      const emptyProduct = {
-        categoria: "Suplemento",
-        marca: "Tu Marca",
-        nombre: "Nuevo producto",
-        formato: "Presentación",
-        precio: 0,
-        imagen: "https://via.placeholder.com/400x300/333/f5bd18?text=Nuevo"
-      };
-      products.push(emptyProduct);
-      filterProducts();
-    });
-
-    document.getElementById("explore-button").addEventListener("click", () => {
-      document.getElementById("catalogo").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    // Ya no tenemos el botón "AGREGAR CUADRO", eliminamos su listener
 
     // Render inicial
     renderCatalog(products);
