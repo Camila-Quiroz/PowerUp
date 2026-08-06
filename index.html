@@ -72,7 +72,7 @@
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#indice">ÍNDICE</a>
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#catalogo">CATÁLOGO</a>
     </nav>
-    <a class="rounded-full border border-[#f5bd18] px-3 py-2 text-[10px] font-black tracking-[.1em] text-[#f5bd18] text-[15px]" href="#catalogo">PRECIOS PÚBLICOS</a>
+    <a class="rounded-full border border-[#f5bd18] px-3 py-2 text-[10px] font-black tracking-[.1em] text-[#f5bd18] text-[15px]" href="#catalogo">PRECIOS </a>
   </div>
 </header>
 
@@ -112,7 +112,10 @@
         <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Creatina">CREATINA</button>
         <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Pre-Entreno">PRE-ENTRENOS</button>
         <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Vitamina">VITAMINAS</button>
-        <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Ganador">GANADORES</button>
+        <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Aminoacidos">AMINOACIDOS</button>
+        <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Colágeno">COLAGENO</button>
+        <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Omega">OMEGA</button>
+        <button class="border border-[#09090918] bg-white p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="Quemador">QUEMADOR</button>
         <button class="bg-[#f5bd18] p-5 text-left transition hover:bg-[#090909] hover:text-white text-[15px] font-bold" data-category-link="all">VER TODO</button>
       </div>
     </div>
@@ -140,6 +143,11 @@
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Creatina" aria-pressed="false">CREATINA</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Pre-Entreno" aria-pressed="false">PRE-ENTRENOS</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Vitamina" aria-pressed="false">VITAMINAS</button>
+        <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Aminoacidos" aria-pressed="false">AMINOACIDOS</button>
+        <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Colágeno" aria-pressed="false">COLAGENO</button>
+        <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Omega" aria-pressed="false">OMEGA</button>    
+        <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Quemador" aria-pressed="false">QUEMADOR</button>        
+    
       </div>
       <div id="catalog-results" class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
       <p id="empty-state" class="mt-8 hidden border border-dashed border-[#f5bd1870] bg-[#141414] px-6 py-12 text-center text-sm text-[#f5bd18] text-[15px] italic">No encontramos cuadros con esos criterios. Prueba otra búsqueda o categoría.</p>
@@ -171,7 +179,7 @@
       <p class="mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]" data-field="formato">Presentación · sabor · tamaño</p>
       <div class="mt-5 flex items-end justify-between gap-3 border-t border-white/10 pt-4">
         <div>
-          <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIO PÚBLICO</span>
+          <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIO</span>
           <strong class="mt-1 block w-fit text-xl font-black text-[#f5bd18]" data-field="precio">$ 0</strong>
         </div>
         <i data-lucide="tag" class="h-5 w-5 text-[#f5bd18]"></i>
@@ -197,29 +205,58 @@
       { categoria: "Proteina", marca: "VITANAS", nombre: "Titan Beef Mass", formato: "10 lb", precio: 230000, imagen: "Titan_Beef_Mass.webp" },
       { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "2 lb", precio: 178000, imagen: "Be_One.webp" },
       { categoria: "Proteina", marca: "GMN", nombre: "Be One", formato: "3 lb", precio: 249000, imagen: "Be_One.webp" },
-      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "2 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpeg" },
+      { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "2 lb", precio: 74200, imagen: "Mega_gainer_2lb.jpg" },
       { categoria: "Proteina", marca: "GMN", nombre: "Mega Gainer", formato: "5 lb", precio: 74200, imagen: "imagenes/Mega_Gainer_5_lb.webp" },
+      { categoria: "Proteina", marca: "NUTRAMERICAN PHARMA", nombre: "Megaplex Creatine Power 10 lb ", formato: "17 Servicios", precio: 284990, imagen: "imagenes/Megaplex_Creatine.jpg" },
+      { categoria: "Proteina", marca: "NUTRAMERICAN PHARMA", nombre: "Megaplex Creatine Power 2.3 lb", formato: "4 Servicios", precio: 74990, imagen: "imagenes/Megaplex_Creatine_23.webp" },
+      { categoria: "Proteina", marca: "NUTRAMERICAN PHARMA", nombre: "Biprotein Classic 2 lb ", formato: "35 Servicios", precio: 249000, imagen: "imagenes/Biprotein_Classic.jpg" },
+      { categoria: "Proteina", marca: "NUTRAMERICAN PHARMA", nombre: "Biprotein Classic 3 lb ", formato: "51 Servicios", precio: 329000, imagen: "imagenes/biBiprotein_Classic_3_lb.png" },
 
       // ---- CREATINA ----
       { categoria: "Creatina", marca: "VITANAS", nombre: "Creatine Time 150g", formato: "50 Servicios", precio: 58000, imagen: "Creatine_Time.webp" },
       { categoria: "Creatina", marca: "IMN", nombre: "Creatine Time 300g", formato: "100 Servicios", precio: 98000, imagen: "Creatine_Time_100.webp" },
       { categoria: "Creatina", marca: "GMN", nombre: "Creatine Monohidrato", formato: "100 Servicios", precio: 98000, imagen: "creatina_monohidratada_GMN.webp" },
+      { categoria: "Creatina", marca: "Healthy Sports", nombre: "Healthy 150g Unflavored ", formato: "50 Servicios", precio: 85000, imagen: "imagenes/Healthy_Unflavored.webp" },
+      { categoria: "Creatina", marca: "Healthy Sports", nombre: "Healthy 300g Unflavored ", formato: "100 Servicios", precio: 127200, imagen: "imagenes/Healthy_Unflavored_100.webp" },
+      { categoria: "Creatina", marca: "IMN", nombre: "Creatina Monohidratada (500 g) ", formato: "133 Servicios", precio: 129000, imagen: "imagenes/Creatina_Monohidratada_imn.webp" },
+      { categoria: "Creatina", marca: "IMN", nombre: "Creatina Monohidratada (300 g) ", formato: "50 Servicios", precio: 79900, imagen: "imagenes/Creatina_Monohidratada_imn.webp" },
+      { categoria: "Creatina", marca: "MACROBLENDS", nombre: "CR2 (Passion fruit)", formato: "30 Servicios", precio: 69000, imagen: "imagenes/CR2_Passion_fruit.jpg" },
+      { categoria: "Creatina", marca: "MACROBLENDS", nombre: "CR2 Creatine(360g) ", formato: "60 Servicios", precio: 99000, imagen: "imagenes/Creatina_CR2.webp" },
 
       // ---- PRE-ENTRENOS ----
       { categoria: "Pre-Entreno", marca: "ALLEN NUTRITION", nombre: "Pre Workout / Allen 30 Serv (450g)", formato: "450 g / 30 serv", precio: 135000, imagen: "allen_pre_workout.jpg" },
       { categoria: "Pre-Entreno", marca: "BESTELITE", nombre: "Thundr+ 30 Serv Mora Azul", formato: "30 serv / Mora Azul", precio: 143000, imagen: "thundr_pre.jpg" },
       
       // ---- VITAMINAS ----
-      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina C 1000mg (100 Tab)", formato: "100 tabs", precio: 67000, imagen: "vit_c_1000.jpg" },
-      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina D3 2000 IU (100 Sft)", formato: "100 softgels", precio: 46000, imagen: "vit_d3_2000.jpg" },
-     
-      // ---- GANADORES ----
-      { categoria: "Ganador", marca: "GMN", nombre: "Mega Gainer Vainilla 10 Lbs", formato: "10 lb / Vainilla", precio: 287000, imagen: "mega_gainer_10lb.jpg" },
-      { categoria: "Ganador", marca: "GMN", nombre: "Super Mega Gainer 10 Lbs Vainilla", formato: "10 lb / Vainilla", precio: 261000, imagen: "super_mega_gainer_10lb.jpg" },
- 
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "B-100 Complex ", formato: "50 tabs", precio: 86000, imagen: "imagenes/B_100_Complex.webp" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "VCal-Mag-Zinc Plus VD3", formato: "90 Cap", precio: 63000, imagen: "imagenes/Cal_Mag_Zinc_Plus_VD3.jpg" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Chelated Zinc 40 mg", formato: "100 tabs", precio: 69000, imagen: "imagenes/chelated_zinc.jpg" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Fibaxil ", formato: "120 Cap", precio: 80000, imagen: "imagenes/Fibaxil.webp" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Melatonina 3mg ", formato: "120 Sft", precio: 53000, imagen: "imagenes/Melatonina.jpg" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Potassium 99mg  ", formato: "60 cap", precio: 52000, imagen: "imagenes/Potassium_99mg.webp" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Prosbiotics ", formato: "60 Gummies", precio: 60000, imagen: "imagenes/Probiotics.jpg" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Super Magnesium 400mg", formato: "100 Sft", precio: 85000, imagen: "imagenes/Super_Magnesium.webp" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina C 1000mg  ", formato: "100 Tab", precio: 67000, imagen: "imagenes/Vitamina_C.webp" },
+      { categoria: "Vitamina", marca: "HEALTHY AMERICA", nombre: "Vitamina D3 2000 IU  ", formato: "100 Sft", precio: 67000, imagen: "imagenes/Vitamina_D3.jpg" },
+      { categoria: "Vitamina", marca: "IMN", nombre: "Multi(Vitamina C / Multivitamínico 600 g) ", formato: "30 Servicios", precio: 69900, imagen: "imagenes/Multi_MN.webp" },
+
       // ---- OMEGA Y COLÁGENO ----
-      { categoria: "Omega", marca: "IMN", nombre: "Omega 3 (120 Caps)", formato: "120 caps", precio: 64900, imagen: "imn_omega.jpg" },
-      { categoria: "Colageno", marca: "Nutricost", nombre: "Colágeno Hidrolizado 500 gr", formato: "500 g", precio: 164000, imagen: "nutricost_colageno.jpg" },
+      { categoria: "Omega", marca: "HEALTHY AMERICA", nombre: "Fish Oil Omega 3 1200mg", formato: "100 Cap", precio: 70000, imagen: "imagenes/Fish_Oil_Omega.webp" },
+      { categoria: "Omega", marca: "HEALTHY AMERICA", nombre: "Triple Omega 3-6-9 ", formato: "120 Cap", precio: 99000, imagen: "imagenes/Triple_Omega.webp" },
+      { categoria: "Colágeno", marca: "IMN", nombre: "KORAGEEM (Collagen Red Fusion 480 g) ", formato: "24 Servicios", precio: 89900, imagen: "imagenes/KORAGEEM.jpg" },
+      { categoria: "Colágeno", marca: "IMN", nombre: "KORAGEEM (Collagen Té Chai 480 g)  ", formato: "24 Servicios", precio: 89900, imagen: "imagenes/KORAGEEM_Te.jpg" },
+      { categoria: "Omega", marca: "IMN", nombre: "Omega 3   ", formato: "120 Caps", precio: 64900, imagen: "imagenes/OMEGA_3_imn.webp" },
+      { categoria: "Omega", marca: "MACROBLENDS", nombre: "Omega 3  ", formato: "120 Caps", precio: 75000, imagen: "imagenes/Omega_Megablends.png" },
+      { categoria: "Colágeno", marca: "NUTRAMERICAN PHARMA", nombre: "Collagen Stack ", formato: "45 Servicios", precio: 99990, imagen: "imagenes/Collagen_Stack.webp" },
+
+      // --- Aminoacidos
+      { categoria: "Aminoacidos", marca: "IMN", nombre: "BCAA 2:1:1", formato: "30 Servicios", precio: 119900, imagen: "imagenes/BCAA.jpg" },
+      { categoria: "Aminoacidos", marca: "MACROBLENDS", nombre: "EAAS Mix Aminos", formato: "30 Servicios", precio: 117900, imagen: "imagenes/Mix_Aminos_30.png" },
+      // --- Quemador
+      { categoria: "Quemador", marca: "NUTRAMERICAN PHARMA", nombre: "Burner Stack 360g ", formato: "60 Servicios", precio: 139990, imagen: "imagenes/Burner_Stack_360g.webp" },
+     
+      
+
     ];
 
     // ----------------------------------------------------------------
