@@ -62,7 +62,7 @@
 <header class="sticky top-0 z-30 w-full border-b border-[#f5bd1838] bg-[#090909ee] backdrop-blur">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
     <a href="#inicio" class="flex min-w-0 items-center gap-3">
-      <img loading="lazy" class="h-11 w-11 rounded-full object-cover" src="imagenes/logo1.JPEG" alt="PowerUp Logo" />
+      <img loading="lazy" class="h-11 w-11 rounded-full object-cover" src="imagenes/logo_1.JPEG" alt="PowerUp Logo" />
       <div class="leading-none">
         <span class="block font-black tracking-[.18em] text-white text-[15px]">POWERUP</span>
         <span class="mt-1 block text-[9px] font-bold tracking-[.3em] text-[#f5bd18] text-[15px]">SUPPLEMENTATION</span>
@@ -71,7 +71,6 @@
     <nav class="hidden items-center gap-7 md:flex">
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#indice">ÍNDICE</a>
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#catalogo">CATÁLOGO</a>
-      <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#guia">GUÍA</a>
     </nav>
     <a class="rounded-full border border-[#f5bd18] px-3 py-2 text-[10px] font-black tracking-[.1em] text-[#f5bd18] text-[15px]" href="#catalogo">PRECIOS PÚBLICOS</a>
   </div>
@@ -148,19 +147,6 @@
     </div>
   </section>
 
-  <!-- GUÍA -->
-  <aside id="guia" class="w-full px-5 py-16 md:px-8 bg-[#090909]">
-    <div class="mx-auto grid max-w-7xl gap-9 border border-[#f5bd1855] bg-[#121212] p-7 md:grid-cols-[1fr_auto] md:items-center md:p-11">
-      <div>
-        <p class="text-xs font-black tracking-[.2em] text-[#f5bd18] text-[15px]">03 — EDICIÓN RÁPIDA</p>
-        <h2 class="brand-display mt-4 max-w-2xl leading-tight text-white text-[23px] font-bold">Haz clic y completa cada cuadro.</h2>
-        <p class="mt-5 max-w-2xl text-sm leading-relaxed text-[#d4d0c7] text-[15px]">Escribe la categoría que necesites, como Pre-Entreno, Proteína, Creatina o Vitamina. </p>
-      </div>
-      <div class="flex h-20 w-20 items-center justify-center rounded-full border border-[#f5bd18] text-[#f5bd18]">
-        <i data-lucide="pencil-line" class="h-9 w-9"></i>
-      </div>
-    </div>
-  </aside>
 </main>
 
 <footer class="w-full border-t border-[#f5bd1838] bg-[#090909] px-5 py-8 md:px-8">
@@ -178,16 +164,16 @@
     </div>
     <div class="p-5">
       <div class="flex items-start justify-between gap-3 mb-4">
-        <span class="bg-[#f5bd18] px-2 py-1 text-[9px] font-black tracking-[.1em] text-[#090909]">CATEGORÍA</span>
+        <span class="bg-[#f5bd18] px-2 py-1 text-[9px] font-black tracking-[.1em] text-[#090909]" data-field="categoria">CATEGORÍA</span>
         <i data-lucide="package-plus" class="h-5 w-5 text-[#f5bd18] flex-shrink-0"></i>
       </div>
-      <p class="w-fit text-[10px] font-black tracking-[.16em] text-[#f5bd18] mb-3">MARCA</p>
-      <h3 class="min-h-[3rem] text-base font-extrabold leading-snug text-white">Nombre del suplemento</h3>
-      <p class="mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]">Presentación · sabor · tamaño</p>
+      <p class="w-fit text-[10px] font-black tracking-[.16em] text-[#f5bd18] mb-3" data-field="marca">MARCA</p>
+      <h3 class="min-h-[3rem] text-base font-extrabold leading-snug text-white" data-field="nombre">Nombre del suplemento</h3>
+      <p class="mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]" data-field="formato">Presentación · sabor · tamaño</p>
       <div class="mt-5 flex items-end justify-between gap-3 border-t border-white/10 pt-4">
         <div>
           <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIO PÚBLICO</span>
-          <strong class="mt-1 block w-fit text-xl font-black text-[#f5bd18]">$ 0</strong>
+          <strong class="mt-1 block w-fit text-xl font-black text-[#f5bd18]" data-field="precio">$ 0</strong>
         </div>
         <i data-lucide="tag" class="h-5 w-5 text-[#f5bd18]"></i>
       </div>
@@ -205,7 +191,7 @@
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "2 lb", precio: 179000, imagen: "whey_elite.jpg" },
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "5 lb", precio: 385000, imagen: "whey_elite.jpg" },
       { categoria: "Proteina", marca: "VITANAS", nombre: "100% Whey Elite", formato: "8 lb", precio: 547000, imagen: "whey_elite.jpg" },
-      { categoria: "Proteina Vegana", marca: "ALLEN NUTRITION", nombre: "Vegann Pro 2.2 Lb", formato: "2.2 lb", precio: 235000, imagen: "vegann_pro.jpg" },
+      { categoria: "Proteina ", marca: "VITANAS", nombre: "Beef Isolate", formato: "2 lb", precio: 175000, imagen: "imagenes/Beef Isolate.webp" },
       { categoria: "Proteina", marca: "BESTELITE", nombre: "Whey Total 2LB", formato: "2 lb", precio: 133000, imagen: "whey_total.jpg" },
       { categoria: "Proteina", marca: "BESTELITE", nombre: "Solid Isolate Caramel Vainilla 840 g", formato: "840 g / Caramel Vainilla", precio: 271000, imagen: "solid_isolate.jpg" },
       { categoria: "Proteina", marca: "BESTELITE", nombre: "Solid Iso Whey Vainilla Wafer 840gr", formato: "840 g", precio: 151000, imagen: "solid_iso.jpg" },
@@ -329,25 +315,25 @@
       const fragment = template.content.cloneNode(true);
       const card = fragment.querySelector("article");
 
-      // Elementos a rellenar
-      const catSpan = card.querySelector(".bg-[#f5bd18].px-2.py-1");
-      const brandP = card.querySelector(".w-fit.text-[10px].font-black");
-      const nameH3 = card.querySelector("h3.min-h-\\[3rem\\].text-base.font-extrabold");
-      const formatP = card.querySelector(".mt-2.min-h-\\[1.25rem\\].text-xs.text-\\[\\#b7b3aa\\]");
-      const priceStrong = card.querySelector("strong.mt-1.block.w-fit.text-xl.font-black");
+      // Usamos data-attributes para localizar los elementos
+      const catSpan = card.querySelector("[data-field='categoria']");
+      const brandP = card.querySelector("[data-field='marca']");
+      const nameH3 = card.querySelector("[data-field='nombre']");
+      const formatP = card.querySelector("[data-field='formato']");
+      const priceStrong = card.querySelector("[data-field='precio']");
       const img = card.querySelector("img");
 
+      // Asignar valores
       if (catSpan) catSpan.textContent = product.categoria || "Suplemento";
       if (brandP) brandP.textContent = product.marca || "";
       if (nameH3) nameH3.textContent = product.nombre || "";
       if (formatP) formatP.textContent = product.formato || "";
       if (priceStrong) priceStrong.textContent = `$ ${product.precio.toLocaleString('es-CO')}`;
 
-      // Asignar imagen: si existe el campo imagen, se usa; si no, placeholder.
+      // Asignar imagen: si no tiene "imagenes/" al inicio, lo agregamos
       let imgSrc = "https://via.placeholder.com/400x300/333/f5bd18?text=Sin+Imagen";
       if (product.imagen) {
-        // Si no contiene "imagenes/", lo agregamos para que la ruta sea relativa a la carpeta imagenes
-        if (!product.imagen.includes("imagenes/")) {
+        if (!product.imagen.startsWith("imagenes/") && !product.imagen.startsWith("http")) {
           imgSrc = "imagenes/" + product.imagen;
         } else {
           imgSrc = product.imagen;
@@ -355,7 +341,6 @@
       }
       if (img) img.src = imgSrc;
 
-      // Devolver el card completo
       return card;
     }
 
@@ -370,7 +355,10 @@
         const card = createProductCard(p);
         results.appendChild(card);
       });
-      lucide.createIcons();
+      // Recrear íconos de Lucide
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
     }
 
     function filterProducts() {
@@ -437,7 +425,7 @@
 
     // Render inicial
     renderCatalog(products);
-    lucide.createIcons();
+    console.log("Catálogo renderizado correctamente. Productos:", products.length);
   });
 </script>
 </body>
