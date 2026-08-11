@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PowerUp Supplementation | Catálogo</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600;700&family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -72,7 +72,7 @@
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#indice">ÍNDICE</a>
       <a class="text-xs font-bold tracking-[.12em] text-white transition hover:text-[#f5bd18]" href="#catalogo">CATÁLOGO</a>
     </nav>
-    <a class="rounded-full border border-[#f5bd18] px-3 py-2 text-[10px] font-black tracking-[.1em] text-[#f5bd18] text-[15px]" href="#catalogo">PRECIOS </a>
+    <a class="rounded-full border border-[#f5bd18] px-3 py-2 text-[10px] font-black tracking-[.1em] text-[#f5bd18] text-[15px]" href="#catalogo">SUPLEMENTOS </a>
   </div>
 </header>
 
@@ -91,7 +91,6 @@
         <img loading="lazy" class="mb-7 h-32 w-32 rounded-2xl object-cover shadow-2xl shadow-black md:h-40 md:w-40" src="imagenes/logo.png" alt="PowerUp Logo" />
         <h1 class="brand-display max-w-2xl leading-tight text-white text-[30px] font-bold">MÁS FUERZA. MÁS ENFOQUE.<br />MEJORES RESULTADOS.</h1>
         <p class="mt-6 max-w-xl text-base leading-relaxed text-[#ddd7ca] md:text-lg">Escribenos a instagram @powerup1001 para más información.</p>
-        <!-- Botón EDITAR CATÁLOGO eliminado -->
       </div>
     </div>
     <div class="absolute bottom-0 left-0 h-1 w-full gold-rule"></div>
@@ -133,8 +132,8 @@
         <div class="w-full max-w-md">
           <label class="mb-2 block text-xs font-bold tracking-[.08em] text-white text-[15px]" for="product-search">BUSCAR PRODUCTO</label>
           <div class="relative">
-            <i data-lucide="search" class="pointer-events-none absolute left-4 top-3 h-4 w-4 text-[#f5bd18]"></i>
-            <input id="product-search" class="w-full border border-[#ffffff26] bg-[#121212] py-3 pl-10 pr-4 text-sm text-white outline-none transition focus:border-[#f5bd18] focus:ring-1 focus:ring-[#f5bd18] text-[15px]" type="search" placeholder="Marca, producto o categoría" />
+
+            <input id="product-search" class="w-full border border-[#ffffff26] bg-[#121212] py-3 pl-4 pr-4 text-sm text-white outline-none transition focus:border-[#f5bd18] focus:ring-1 focus:ring-[#f5bd18] text-[15px]" type="search" placeholder="Marca, producto o categoría" />
           </div>
         </div>
       </div>
@@ -148,8 +147,6 @@
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Colágeno" aria-pressed="false">COLAGENO</button>
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Omega" aria-pressed="false">OMEGA</button>    
         <button class="filter-btn border border-[#ffffff30] px-4 py-2 text-xs font-bold transition bg-[#121212] text-white text-[15px]" data-filter="Precursor" aria-pressed="false">PRECURSOR</button>        
-
-        
       </div>
       <div id="catalog-results" class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
       <p id="empty-state" class="mt-8 hidden border border-dashed border-[#f5bd1870] bg-[#141414] px-6 py-12 text-center text-sm text-[#f5bd18] text-[15px] italic">No encontramos cuadros con esos criterios. Prueba otra búsqueda o categoría.</p>
@@ -174,17 +171,17 @@
     <div class="p-5">
       <div class="flex items-start justify-between gap-3 mb-4">
         <span class="bg-[#f5bd18] px-2 py-1 text-[9px] font-black tracking-[.1em] text-[#090909]" data-field="categoria">CATEGORÍA</span>
-        <i data-lucide="package-plus" class="h-5 w-5 text-[#f5bd18] flex-shrink-0"></i>
+      
       </div>
       <p class="w-fit text-[10px] font-black tracking-[.16em] text-[#f5bd18] mb-3" data-field="marca">MARCA</p>
       <h3 class="min-h-[3rem] text-base font-extrabold leading-snug text-white" data-field="nombre">Nombre del suplemento</h3>
       <p class="mt-2 min-h-[1.25rem] text-xs text-[#b7b3aa]" data-field="formato">Presentación · sabor · tamaño</p>
       <div class="mt-5 flex items-end justify-between gap-3 border-t border-white/10 pt-4">
         <div>
-          <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIO</span>
+          <span class="block text-[9px] font-bold tracking-[.12em] text-[#b7b3aa]">PRECIOS</span>
           <strong class="mt-1 block w-fit text-xl font-black text-[#f5bd18]" data-field="precio">$ 0</strong>
         </div>
-        <i data-lucide="tag" class="h-5 w-5 text-[#f5bd18]"></i>
+       
       </div>
     </div>
   </article>
@@ -394,10 +391,7 @@
         const card = createProductCard(p);
         results.appendChild(card);
       });
-      // Recrear íconos de Lucide
-      if (typeof lucide !== "undefined") {
-        lucide.createIcons();
-      }
+
     }
 
     function filterProducts() {
